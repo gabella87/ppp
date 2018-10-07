@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<div style="text-align:center">
+  <h1>
+    Listado de hosts
+  </h1>
+</div>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th><th>Nombre</th><th>Tipo</th><th>Ambiente</th><th>Estado</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let host of data">
+    <td>{{host.id}}</td>
+    <td>{{host.nombre}}</td>
+    <td>{{host.tipo}}</td>
+    <td>{{host.ambiente}}</td>
+    <td>{{host.estado}}</td>
+    
+  </tr>
+</table>
+
